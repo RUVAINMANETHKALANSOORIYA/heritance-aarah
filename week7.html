@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<div x-data="{
+    activeTab:1
+}" id="tabExample">
+<ul class="flex space-x-10">
+    <li class="bg-red-400 cursor-pointer"
+    x-on:click="activeTab=1">
+    tab1 
+    <li class="bg-green-400 cursor-pointer"
+    x-on:click="activeTab=2">
+    tab2 
+    <li class="bg-blue-400 cursor-pointer"
+    x-on:click="activeTab=3">
+    tab3
+    </li>
+
+</ul>
+
+<div>
+    <div class="bg-red-400" x-show="activeTab==1">tab 1 content></div>
+    <div class="bg-green-400" x-show="activeTab==2">tab2 content></div>
+    <div class="bg-blue-400" x-show="activeTab==3">tab 3 content></div>
+    
+</div>
+
+<script>
+    // create an hotel login form
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</div>
+</ul>
+</ul>
+
+
+
+
+
+</body>
+</html>
