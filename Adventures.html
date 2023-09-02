@@ -7,161 +7,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure page</title>
   <link rel="stylesheet" href="/css codes/adventure.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body>
 
-  
-<header>
-    <div class="content flex_space">
-      <div class="logo">
-       <a href="http://127.0.0.1:5500/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+  <div id="app" x-data="{
+    version: '1.0.0'
+  }">
+
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <a href="http://127.0.0.1:5500/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="http://127.0.0.1:5500/index.html">home</a> </li>
+            <li><a href="http://127.0.0.1:5500/Adventures.html">Adventures</a></li>
+            <li><a href="http://127.0.0.1:5500/restaurents.html">Restaurents</a> </li>
+            <li><a href="http://127.0.0.1:5500/events.html">events</a> </li>
+            <li><a href="http://127.0.0.1:5500/branches.html">branches</a> </li>
+            <li><a href="http://127.0.0.1:5500/booking.html">booking</a> </li>
+            <li> <i class="fa fa-search"></i> </li>
+            <li> <button class="primary-btn"><a href="http://127.0.0.1:5500/booking.html">BOOK NOW</button></a></li>
+          </ul>
+          <span class="fa fa-bars" onclick="menutoggle()"></span>
+        </div>
       </div>
-      <div class="navlinks">
-        <ul id="menulist">
-          <li><a href="http://127.0.0.1:5500/index.html">home</a> </li>
-          <li><a href="http://127.0.0.1:5500/Adventures.html">Adventures</a></li>
-          <li><a href="http://127.0.0.1:5500/restaurents.html">Restaurents</a> </li>
-          <li><a href="http://127.0.0.1:5500/events.html">events</a> </li>
-          <li><a href="http://127.0.0.1:5500/branches.html">branches</a> </li>
-          <li><a href="http://127.0.0.1:5500/booking.html">booking</a> </li>
-          <li> <i class="fa fa-search"></i> </li>
-          <li> <button class="primary-btn">BOOK NOW</button> </li>
-        </ul>
-        <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+    </header>
+
+    <section class="home">
+      <div class="image"></div>
+      <img src="images/Experience-7.jpg" alt="A scenic view" width="300" height="200">
+      <div class="overlay-text">
+        <h1>Adventures</h1>
       </div>
-    </div>
-    
-  </header>
-  <section class="home">
-    <div class="image"></div>
-    <img src="images/Experience-7.jpg" alt="A scenic view" width="300" height="200">
-    <div class="overlay-text"><h1>Adventures</h1></div>
-    <div class="text">.......in heritance aarah...........</div>
-  </section>
+      <div class="text">.......in heritance aarah...........</div>
+    </section>
 
-  
-  <section class="about top">
-    <div class="container flex">
-      <div class="left">
-        <div class="heading">
-          <h1>EXPERIENCES </h1>
-          <h2>Heritance Aarah</h2>
-        </div>
-        <p>Answer the call of adventure echoing in the breeze, beckoning you to come and experience the thrills of the 
-          Indian Ocean at one of the best all inclusive resorts in Maldives. Dive to the depths where Maldives attractions take 
-          the form of colourful coral and marine life, ride the waves and feel a sense of pure freedom or sail the seas
-           towards a new horizon.
-            
-            </p><br>
-            <p>Local Islands are great way to explore the culture, lifestyle and art
-              that is found in Maldives. Visit nearby Island is great wat to explore
-              local culture, live and work together in more of a traditional way</p>
+    <section class="about top">
+      <div class="container flex">
+        <div class="left">
+          <div class="heading">
+            <h1>EXPERIENCES </h1>
+            <h2>Heritance Aarah</h2>
           </div>
-          <div class="right">
-            <img src="images/Welcome-Image.jpg" alt="img" height="650">
-          </div>
-        </div>
-      </section>
-      <section class="adventure-section">
-        <h1><u>Our Adventures</u></h1>
-        <div class="adventure-container flex_space">
-          <div class="adventure-item">
-            <img src="images/Fly_Boarding.jpg" alt="Adventure 1" height="400" width="400">
-            <h2>FLY BOARDING</h2>
-            <p>Fly-boarding lets you fly above the ocean like Superman or dive under like a dolphin</p>
-          </div>
-          <div class="adventure-item">
-            <img src="images/Snorkeling-2.jpg" alt="Adventure 2" height="400" width="395">
-            <h2>DIVING</h2>
-            <p>Explore a vibrant underwater world full of marine treasures</p>
-          </div>
-          <div class="adventure-item">
-            <img src="images/sailing.jpg" alt="Adventure 3"  height="400" width="400">
-            <h2>CATAMARAN SAILING</h2>
-            <p>Set sail on the high seas in search of new adventures</p>
-          </div>
-          <div class="adventure-item">
-            <img src="images/WIND-SURFING-2.jpg" alt="Adventure 4"  height="400" width="400">
-            <h2>WIND SURFING</h2>
-            <p>Windsurfing at Aarah offers the chance to perfect the skills of both sailing and surfing combined.</p>
-          </div>
-        </div>
-      </section>
+          <p>Answer the call of adventure echoing in the breeze, beckoning you to come and experience the thrills of the
+            Indian Ocean at one of the best all inclusive resorts in Maldives. Dive to the depths where Maldives
+            attractions take
+            the form of colourful coral and marine life, ride the waves and feel a sense of pure freedom or sail the
+            seas
+            towards a new horizon.
 
-
-      <section class="newsletter mtop">
-        <div class="container flex_space">
-          <h1>Subscribe to Our Newsletter</h1>
-          <input type="text" placeholder="Your Email">
-          <input type="text" value="Subscribe">
+          </p><br>
+          <p>Local Islands are great way to explore the culture, lifestyle and art
+            that is found in Maldives. Visit nearby Island is great wat to explore
+            local culture, live and work together in more of a traditional way</p>
         </div>
-      </section>
-      
-      <button class="next-page"><a href="http://127.0.0.1:5500/restaurents.html">NEXT PAGE</a></button>
-      <div class="click">
-       <br> <h1 style="text-align: center;">Click <a href="http://www.heritancehotels.com/aarah/wp-content/uploads/sites/8/2022/12/HAR-Updated-Heritance-Aarah-Experience-08.12.2022.pdf" 
+        <div class="right">
+          <img src="images/Welcome-Image.jpg" alt="img" height="650">
+        </div>
+      </div>
+    </section>
+
+    <section class="container adventure-section">
+      <h2>Our Adventures</h2>
+      <div class="adventure-container flex_space">
+        <template x-for="adventureItem in $store.adventures.activities">
+          <div class="adventure-item">
+            <img x-bind:src="adventureItem.image" alt="Adventure 1" />
+            <h2 x-text="adventureItem.title"></h2>
+            <p x-text="adventureItem.description"></p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section class="newsletter mtop">
+      <div class="container flex_space">
+        <h1>Subscribe to Our Newsletter</h1>
+        <input type="text" placeholder="Your Email">
+        <input type="text" value="Subscribe">
+      </div>
+    </section>
+
+    <button class="next-page"><a href="http://127.0.0.1:5500/restaurents.html">NEXT PAGE</a></button>
+
+    <div class="click">
+      <br>
+      <h1 style="text-align: center;">Click <a
+          href="http://www.heritancehotels.com/aarah/wp-content/uploads/sites/8/2022/12/HAR-Updated-Heritance-Aarah-Experience-08.12.2022.pdf"
           target="_blank" rel="noopener noreferrer">here</a> to check out the experience packages.</h1>
-      </div>
-      <footer>
-        <div class="container grid">
-          <div class="box">
-            <img src="" alt="">
-            <p>FORBES BEST BEACHFRONT ALL-INCLUSIVE FAMILY RESORT 2023
-    
-                 Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male. 
-                 Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for
-                 the perfect getaway, with a myriad of offerings from an impressive array of dining options by award-winning chefs,
-                 to exploring the over or underwater marvels of the Raa Atoll.  
-                
-                 Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the Maldives and 
-                 the first green-rated building. We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.</p>
-    
-            <div class="icon">
-              <i class="fa fa-facebook-f"></i>
-              <i class="fa fa-instagram"></i>
-              <i class="fa fa-twitter"></i>
-              <i class="fa fa-youtube"></i>
-            </div>
-          </div>
-    
-          <div class="box">
-            <h2>Links</h2>
-            <ul>
-              <li>Company History</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Services</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-    
-          <div class="box">
-            <h2>Contact Us</h2>
-            <p>Heritance Aarah, Raa Atoll, Republic of Maldives.
-            </p>
-            <i class="fa fa-location-dot"></i>
-            <label> Heritance Aarah, Raa Atoll, Republic of Maldives.</label> <br>
-            <i class="fa fa-phone"></i>
-            <label>+9606580221</label> <br>
-            <i class="fa fa-envelope"></i>
-            <label>Ruvain Maneth</label> <br>
+    </div>
+
+    <footer>
+      <div class="container grid">
+        <div class="box">
+          <img src="" alt="">
+          <p>FORBES BEST BEACHFRONT ALL-INCLUSIVE FAMILY RESORT 2023
+
+            Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
+            Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for
+            the perfect getaway, with a myriad of offerings from an impressive array of dining options by award-winning
+            chefs,
+            to exploring the over or underwater marvels of the Raa Atoll.
+
+            Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
+            Maldives and
+            the first green-rated building. We are also Travelife Gold certified and invite you to join our
+            eco-initiatives whilst at the resort.</p>
+
+          <div class="icon">
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
           </div>
         </div>
-      </footer>
-    
-      <div class="legal">
-        <p class="container"></p>
+
+        <div class="box">
+          <h2>Links</h2>
+          <ul>
+            <li>Company History</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Contact Us</h2>
+          <p>Heritance Aarah, Raa Atoll, Republic of Maldives.
+          </p>
+          <i class="fa fa-location-dot"></i>
+          <label> Heritance Aarah, Raa Atoll, Republic of Maldives.</label> <br>
+          <i class="fa fa-phone"></i>
+          <label>+9606580221</label> <br>
+          <i class="fa fa-envelope"></i>
+          <label>Ruvain Maneth</label> <br>
+        </div>
       </div>
-    
-    
-    
-      <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
-    
-  </html>
-  </body>
+    </footer>
+
+    <div class="legal">
+      <p class="container"></p>
+    </div>
+
+  </div>
+
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('adventures', {
+            activities : [
+              {
+                image : 'images/Fly_Boarding.jpg',
+                title: 'FLY BOARDING',
+                description: 'Fly-boarding lets you fly above the ocean like Superman or dive under like a dolphin'
+              },
+              {
+                image : 'images/Snorkeling-2.jpg',
+                title: 'DIVING',
+                description: 'Explore a vibrant underwater world full of marine treasures'
+              },
+              {
+                image : 'images/sailing.jpg',
+                title: 'CATAMARAN SAILING',
+                description: 'Set sail on the high seas in search of new adventures'
+              },
+              {
+                image : 'images/WIND-SURFING-2.jpg',
+                title: 'WIND SURFING',
+                description: 'Windsurfing at Aarah offers the chance to perfect the skills of both sailing and surfing combined.'
+              }
+            ]
+        })
+    })
+</script>
+
+
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+
+</html>
+</body>
