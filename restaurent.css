@@ -340,6 +340,7 @@ footer p {
   color: #b6b7b9;
   font-size: 15px;
   line-height: 25px;
+  margin-right: 35%;
 }
 
 footer .icon i {
@@ -350,10 +351,13 @@ footer .icon i {
 footer h2 {
   color: #fff;
   margin-bottom: 10px;
+  
+ 
 }
 
 footer li {
   margin-bottom: 20px;
+  margin-right: 80px;
 }
 
 footer i {

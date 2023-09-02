@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="branches.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
@@ -39,47 +39,92 @@
     </div>
   </header>
 
-<section class="home">
+  <section class="home">
     <div class="content">
       <div class="owl-carousel owl-theme">
         <div class="item">
-          <img src="images/top.jpg" alt="">
+          <img src="images/heritance negombo.jpg" alt="">
           <div class="text">
             <h1>Spend Your Holiday</h1>
-            <p>.........In Heritance Aarah.........</p>
+            <p>.........In Heritance Negombo.........</p>
             <div class="flex">
               <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn">CONTACT US</button>
+              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contactnegombo.html">CONTACT AND LOCATION  </button></a>
             </div>
+          
+              
+           
           </div>
         </div>
         <div class="item">
-          <img src="images/top1.jpg" alt="">
+          <img src="images/heritance 2.jpg" alt="">
           <div class="text">
             <h1>Spend Your Holiday</h1>
             
-            <p>.........In Heritance Aarah.........</p>
+            <p>.........In Heritance Ayurweda.........</p>
             <div class="flex">
               <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn">CONTACT US</button>
+              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contactayurweda.html">CONTACT AND LOCATION</button></a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="Arrah-r21.jpg" alt="img">
+          <img src="images/heritance 3.jpg" alt="img">
           <div class="text">
             <h1>Spend Your Holiday</h1>
-            <p>.........In Heritance Aarah.........</p>
+            <p>.........In Heritance Kandalama.........</p>
               <div class="flex">
               <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn">CONTACT US</button>
+              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contactkandalama.html">CONTACT AND LOCATION</button></a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   </section>
+  
 
 
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
 
-  </div>
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
