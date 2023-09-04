@@ -284,7 +284,7 @@ h1 {
 /*--------about---------*/
 /*--------counter---------*/
 .counter {
-  background-image: url("/images/experience4.jpg");
+  background-image: url("images/experience4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 30vh;
@@ -505,7 +505,7 @@ h1 {
 /*--------services---------*/
 /*--------Customer---------*/
 .Customer {
-  background-image: url("/images/back.png");
+  background-image: url("images/back.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
