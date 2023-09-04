@@ -10,7 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: sans-serif;
   font-weight: 400;
 }
@@ -230,7 +231,8 @@ h1 {
 
 /*--------book---------*/
 /*--------about---------*/
-.left, .right {
+.left,
+.right {
   width: 50%;
   padding: 30px;
 }
@@ -382,8 +384,8 @@ h1 {
 
 .gallery .img {
   position: relative;
-  width : 250px;
-  height:150px;
+  width: 250px;
+  height: 150px;
 }
 
 .gallery .img::after {
@@ -497,7 +499,7 @@ h1 {
 
 .services .box:hover i,
 .services .box:hover h3 {
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 /*--------services---------*/
@@ -563,7 +565,7 @@ h1 {
 }
 
 .owl-carousel2 .active span {
-  background:rgb(31, 142, 164) !important;
+  background: rgb(31, 142, 164) !important;
   border: 2px solid #7fc142;
 }
 
@@ -652,7 +654,7 @@ h1 {
 
 .newsletter input:nth-last-child(2) {
   width: 80%;
-  background:rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 .newsletter input:nth-last-child(1) {
@@ -724,7 +726,8 @@ footer label {
     height: 50vh;
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 100%;
   }
 
@@ -823,6 +826,7 @@ footer label {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 .contact-form label {
   display: block;
   margin-bottom: 5px;
@@ -845,10 +849,9 @@ footer label {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  
+
 }
 
 .contact-form button:hover {
   background-color: #0056b3;
 }
-
