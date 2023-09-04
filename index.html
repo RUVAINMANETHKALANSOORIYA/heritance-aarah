@@ -7,80 +7,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heritance Aarah</title>
   <link rel="stylesheet" href="css codes/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="//unpkg.com/alpinejs" defer></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  
-<header>
-    <div class="content flex_space">
-      <div class="logo">
-       <a href="http://127.0.0.1:5500/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+  <div id="app" x-data="{
+    version: '1.0.0'
+  }">
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <a href="http://127.0.0.1:5500/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="http://127.0.0.1:5500/index.html">home</a> </li>
+            <li><a href="http://127.0.0.1:5500/Adventures.html">Adventures</a></li>
+            <li><a href="http://127.0.0.1:5500/restaurents.html">Restaurents</a> </li>
+            <li><a href="http://127.0.0.1:5500/events.html">events</a> </li>
+            <li><a href="http://127.0.0.1:5500/branches.html">branches</a> </li>
+            <li><a href="http://127.0.0.1:5500/booking.html">booking</a> </li>
+            <li> <i class="fa fa-search"></i> </li>
+            <li> <button class="primary-btn"><a href="http://127.0.0.1:5500/booking.html">BOOK NOW</button></a></li>
+          </ul>
+          <span class="fa fa-bars" onclick="menutoggle()"></span>
+        </div>
       </div>
-      <div class="navlinks">
-        <ul id="menulist">
-          <li><a href="http://127.0.0.1:5500/index.html">home</a> </li>
-          <li><a href="http://127.0.0.1:5500/Adventures.html">Adventures</a></li>
-          <li><a href="http://127.0.0.1:5500/restaurents.html">Restaurents</a> </li>
-          <li><a href="http://127.0.0.1:5500/events.html">events</a> </li>
-          <li><a href="http://127.0.0.1:5500/branches.html">branches</a> </li>
-          <li><a href="http://127.0.0.1:5500/booking.html">booking</a> </li>
-          <li> <i class="fa fa-search"></i> </li>
-          <li> <button class="primary-btn"><a href="http://127.0.0.1:5500/booking.html">BOOK NOW</button></a></li>
-        </ul>
-        <span class="fa fa-bars" onclick="menutoggle()"></span>
-      </div>
-    </div>
-  </header>
+    </header>
 
-<section class="home">
-    <div class="content">
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="images/top.jpg" alt="">
-          <div class="text">
-            <h1>Spend Your Holiday</h1>
-            <p>.........In Heritance Aarah.........</p>
-            <div class="flex">
-              <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/top1.jpg" alt="">
-          <div class="text">
-            <h1>Spend Your Holiday</h1>
-            
-            <p>.........In Heritance Aarah.........</p>
-            <div class="flex">
-              <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="Arrah-r21.jpg" alt="img">
-          <div class="text">
-            <h1>Spend Your Holiday</h1>
-            <p>.........In Heritance Aarah.........</p>
+    <section class="home">
+      <div class="content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="images/top.jpg" alt="">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+              <p>.........In Heritance Aarah.........</p>
               <div class="flex">
-              <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/top1.jpg" alt="">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+
+              <p>.........In Heritance Aarah.........</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="Arrah-r21.jpg" alt="img">
+            <div class="text">
+              <h1>Spend Your Holiday</h1>
+              <p>.........In Heritance Aarah.........</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn"><a href="http://127.0.0.1:5500/contacts.html">CONTACT US</button></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
+  </div>
   <script>
     var menulist = document.getElementById('menulist');
     menulist.style.maxHeight = "0px";
@@ -95,12 +101,14 @@
   </script>
 
 
-  
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $('.owl-carousel').owlCarousel({
       loop: true,
@@ -151,14 +159,16 @@
           <h1>WELCOME</h1>
           <h2>Heritance Aarah</h2>
         </div>
-        <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male. 
-            Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the perfect getaway,
-             with a myriad of offerings from an impressive array of dining options by award-winning chefs, 
-             to exploring the over or underwater marvels of the Raa Atoll.  
-            Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the Maldives and the first green-rated building.
-             We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.
-            
-            </p>
+        <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
+          Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the
+          perfect getaway,
+          with a myriad of offerings from an impressive array of dining options by award-winning chefs,
+          to exploring the over or underwater marvels of the Raa Atoll.
+          Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
+          Maldives and the first green-rated building.
+          We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.
+
+        </p>
         <button class="primary-btn">ABOUT US</button>
       </div>
       <div class="right">
@@ -198,11 +208,15 @@
       <div class="heading">
         <h1>EXPOLRE</h1>
         <h2>Our Rooms</h2>
-        <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and contemporary comforts with traditional aesthetics. 
-            Rise to the gentle rhythm of the waves each day and enjoy a slower pace, 
-            as you dive into the timeless magic of life at our luxury resort. Maldives offers a range of luxury accommodation and the experience you get at Heritance Aarah is unique and special.
-            Endemic vegetation grown on our island between each of our land villas, acts as a natural boundary wall for utmost privacy. 
-            A unique feature of our accommodation is that every villa is stocked with in-villa snorkeling gear, allowing you to experience stunning coral and marine life, any time of the day.
+        <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and
+          contemporary comforts with traditional aesthetics.
+          Rise to the gentle rhythm of the waves each day and enjoy a slower pace,
+          as you dive into the timeless magic of life at our luxury resort. Maldives offers a range of luxury
+          accommodation and the experience you get at Heritance Aarah is unique and special.
+          Endemic vegetation grown on our island between each of our land villas, acts as a natural boundary wall for
+          utmost privacy.
+          A unique feature of our accommodation is that every villa is stocked with in-villa snorkeling gear, allowing
+          you to experience stunning coral and marine life, any time of the day.
         </p><br><br><br>
 
       </div>
@@ -222,7 +236,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>Overlooking endless miles of ocean, our Beach Villas offers direct access to powder soft, 
+              <p>Overlooking endless miles of ocean, our Beach Villas offers direct access to powder soft,
                 white sands right at your doorstep.
               </p>
               <div class="button flex">
@@ -244,7 +258,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>For a romantic escape, inches above the waves, 
+              <p>For a romantic escape, inches above the waves,
                 our Ocean Villas place you intimately close to calm and turquoise waters.
               </p>
               <div class="button flex">
@@ -266,7 +280,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>The magic of sun, sand, 
+              <p>The magic of sun, sand,
                 sea and seclusion combined with the extra comfort and luxury of a private plunge pool.
               </p>
               <div class="button flex">
@@ -288,8 +302,9 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>Ample space and beach access coupled with in-villa facilities 
-                that make family stays enjoyable and comfortable in what feels like your very own private villa in Maldives.
+              <p>Ample space and beach access coupled with in-villa facilities
+                that make family stays enjoyable and comfortable in what feels like your very own private villa in
+                Maldives.
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
@@ -310,8 +325,9 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>A more private and spacious accommodation, 
-                complete with interconnecting rooms to keep the kids close and a plunge pool for the perfect family holiday.
+              <p>A more private and spacious accommodation,
+                complete with interconnecting rooms to keep the kids close and a plunge pool for the perfect family
+                holiday.
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
@@ -332,7 +348,8 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>For a special stay, our Ocean Suites with Infinity Pool are duplex villas which allow you to dive into luxury, 
+              <p>For a special stay, our Ocean Suites with Infinity Pool are duplex villas which allow you to dive into
+                luxury,
                 with easy access to water and your very own private pool.
                 A unique feature of this villa is its Maldivian swing, on your private deck.
               </p>
@@ -355,8 +372,9 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <p>Our most superior category of villa, the Ocean Residence with Infinity Lap Pool offers the perfect space
-                 for a private and luxurious stay above water.
+              <p>Our most superior category of villa, the Ocean Residence with Infinity Lap Pool offers the perfect
+                space
+                for a private and luxurious stay above water.
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
@@ -398,102 +416,102 @@
         <h1>PHOTOS</h1>
         <h2>Our Gallery</h2>
         <p>HERITANCE AARAH- IMAGE GALARY OF HERITANCE AARH</p>
-    </div>
+      </div>
 
-    <div class="content mtop">
-      <div class="owl-carousel owl-carousel1 owl-theme">
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary.jpg" alt="" width="250px" height="250px">
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary.jpg" alt="" width="250px" height="250px">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary1.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary1.jpg" alt="">
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary2.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary3.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary2.jpg" alt="">
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary 4.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary5.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary3.jpg" alt="">
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary 6.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary7.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary 4.jpg" alt="">
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary8.jpg" alt="">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
-          </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary5.jpg" alt="">
-          </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
-          </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary 6.jpg" alt="">
-          </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
-          </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary7.jpg" alt="">
-          </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
-          </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary8.jpg" alt="">
-          </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
-          </div>
-        </div>
-        <div class="items">
-          <div class="img">
-            <img src="galary/galary9.jpg" alt="img">
-          </div>
-          <div class="overlay">
-            <span class="fa fa-plus"> </span>
-            <h3>Photo Title Here.</h3>
+          <div class="items">
+            <div class="img">
+              <img src="galary/galary9.jpg" alt="img">
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
 
@@ -527,11 +545,13 @@
       <div class="heading">
         <h1>SERVICES</h1>
         <h2>Our Services</h2>
-        <p>Heritance Aarah presents the most exquisite and generous package of Premium All-Inclusive in Maldives, 
-            earning us TripAdvisor recognition as ‘Best of the Best’, among the top 25 hotels in the world. Elevating the conventional 
-            all-inclusive to new heights, our Premium All-Inclusive features superior in-villa amenities, resort facilities, snorkel and dive 
-            trips, whiskey and wine tastings, a complementary IASO face scan, 
-            spa credit and exquisite dine-around cuisine perfected by Culinary Olympic and Culinary World Cup winners.
+        <p>Heritance Aarah presents the most exquisite and generous package of Premium All-Inclusive in Maldives,
+          earning us TripAdvisor recognition as ‘Best of the Best’, among the top 25 hotels in the world. Elevating the
+          conventional
+          all-inclusive to new heights, our Premium All-Inclusive features superior in-villa amenities, resort
+          facilities, snorkel and dive
+          trips, whiskey and wine tastings, a complementary IASO face scan,
+          spa credit and exquisite dine-around cuisine perfected by Culinary Olympic and Culinary World Cup winners.
       </div>
 
 
@@ -577,28 +597,34 @@
       <div class="owl-carousel owl-carousel2 owl-theme">
         <div class="item">
           <i class="fa-solid fa-quote-right"></i>
-          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and 
-            contemporary comforts with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy a slower pace, 
-            as you dive into the timeless magic of life at our luxury resort. Maldives offers a range of luxury 
+          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and
+            contemporary comforts with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy
+            a slower pace,
+            as you dive into the timeless magic of life at our luxury resort. Maldives offers a range of luxury
             accommodation and the experience you get at Heritance Aarah is unique and special.</p>
           <h3>Heritance Aarah</h3>
           <label>Heritance Aarah</label>
         </div>
         <div class="item">
           <i class="fa-solid fa-quote-right"></i>
-          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and contemporary comforts
-             with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy a slower pace, as you dive into the 
-             timeless magic of life at our luxury resort. Maldives offers a range of 
+          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and
+            contemporary comforts
+            with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy a slower pace, as you
+            dive into the
+            timeless magic of life at our luxury resort. Maldives offers a range of
             luxury accommodation and the experience you get at Heritance Aarah is unique and special.</p>
           <h3>Heritance Aarah</h3>
           <label>Heritance Aarah</label>
         </div>
         <div class="item">
           <i class="fa-solid fa-quote-right"></i>
-          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and contemporary 
-            comforts with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy a slower pace, as you 
+          <p>At Heritance Aarah, our collection of villas and suites is designed to seamlessly blend indulgent and
+            contemporary
+            comforts with traditional aesthetics. Rise to the gentle rhythm of the waves each day and enjoy a slower
+            pace, as you
             dive into the timeless magic of life at our luxury resort.
-             Maldives offers a range of luxury accommodation and the experience you get at Heritance Aarah is unique and special.</p>
+            Maldives offers a range of luxury accommodation and the experience you get at Heritance Aarah is unique and
+            special.</p>
           <h3>Heritance Aarah</h3>
           <label>Heritance Aarah</label>
         </div>
@@ -632,13 +658,16 @@
       <div class="heading">
         <h1>NEWS</h1>
         <h2>Our News</h2>
-        <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male. 
-            Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the perfect
-             getaway, with a myriad of offerings from an impressive array of
-            dining options by award-winning chefs, to exploring the over or underwater marvels of the Raa Atoll.  
-            Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the Maldives 
-            and the first green-rated building. We are also Travelife Gold certified and invite you to join our eco-initiatives
-             whilst at the resort.</p>
+        <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
+          Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the
+          perfect
+          getaway, with a myriad of offerings from an impressive array of
+          dining options by award-winning chefs, to exploring the over or underwater marvels of the Raa Atoll.
+          Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
+          Maldives
+          and the first green-rated building. We are also Travelife Gold certified and invite you to join our
+          eco-initiatives
+          whilst at the resort.</p>
       </div>
 
 
@@ -659,9 +688,9 @@
               </div>
               <p> with its spas and sunset cruises, paddle boarding, snorkeling and dolphin cruises.
                 Situated in the Raa Atoll, guests can relax and enjoy royal treatment, with Maldivian
-                 hospitality and culture at the centre of the experience. Heritance Aarah has created
-                 the ideal escape for groups to unwind while living in utmost comfort against the breathtaking 
-                 backdrop of the Indian Ocean with the adults-only Ocean Suites.</p>
+                hospitality and culture at the centre of the experience. Heritance Aarah has created
+                the ideal escape for groups to unwind while living in utmost comfort against the breathtaking
+                backdrop of the Indian Ocean with the adults-only Ocean Suites.</p>
             </div>
           </div>
           <div class="items">
@@ -677,11 +706,11 @@
                 <label>500</label>
                 <i class="fa fa-comments"></i>
               </div>
-              <p>Premier hospitality chain Aitken Spence Hotels showcased their prowess in the culinary sphere, 
-                winning five Gold, four Silver and four Bronze at the recently concluded prestigious Villeroy & 
-                Boch Culinary World Cup. 
-              Its flagship Maldives resort, Heritance Aarah collectively took home 13 medals.
-               The five member team from Heritance Aarah, competed against 60 teams from 55 nations,
+              <p>Premier hospitality chain Aitken Spence Hotels showcased their prowess in the culinary sphere,
+                winning five Gold, four Silver and four Bronze at the recently concluded prestigious Villeroy &
+                Boch Culinary World Cup.
+                Its flagship Maldives resort, Heritance Aarah collectively took home 13 medals.
+                The five member team from Heritance Aarah, competed against 60 teams from 55 nations,
                 in an intense five-day competition in Luxembourg-Kirchberg, vying for the prestigious prizes. </p>
             </div>
           </div>
@@ -693,11 +722,12 @@
               <img src="images/our service.jpg" alt="">
             </div>
             <div class="stext">
-              <h2>Discover unmatched seclusion and exquisite experiences; Heritance Aarah introduces Ocean Suites Wing</h2>
-              <p>Heritance Aarah today announced the introduction of the Ocean Suites wing, 
+              <h2>Discover unmatched seclusion and exquisite experiences; Heritance Aarah introduces Ocean Suites Wing
+              </h2>
+              <p>Heritance Aarah today announced the introduction of the Ocean Suites wing,
                 a resort within a resort that embodies the authenticity of the Maldives. The experience begins upon
-                 arrival at the Velana International Airport where guests have access to the exclusive Heritance Aarah
-                  Lounge while awaiting transfer.
+                arrival at the Velana International Airport where guests have access to the exclusive Heritance Aarah
+                Lounge while awaiting transfer.
               </p>
             </div>
           </div>
@@ -707,11 +737,13 @@
             </div>
             <div class="stext">
               <h2>EXPERIENCE THE ULTIMATE INDIAN OCEAN BREAK WITH HERITANCE AARAH MALDIVES</h2>
-              <p>Heritance Aarah Maldives invites all adventure enthusiasts to unravel exotic experiences and enjoy the winter sun on an idyllic island, ensuring a blissful beach break.
+              <p>Heritance Aarah Maldives invites all adventure enthusiasts to unravel exotic experiences and enjoy the
+                winter sun on an idyllic island, ensuring a blissful beach break.
 
-                Situated on the Maldivian island of Raa Atoll, adventure awaits with activities on land and sea, allowing visitors to discover the 
-                best of this slice of paradise. From sunset cruises, night fishing 
-                that ends with cooking up your catch for dinner, to paddle boarding, 
+                Situated on the Maldivian island of Raa Atoll, adventure awaits with activities on land and sea,
+                allowing visitors to discover the
+                best of this slice of paradise. From sunset cruises, night fishing
+                that ends with cooking up your catch for dinner, to paddle boarding,
                 snorkelling and dolphin cruises, no two days will be the same.
               </p>
             </div>
@@ -723,11 +755,12 @@
             <div class="stext">
               <h2>Hotel Review: Heritance Aarah, Raa Atoll In The Maldives
                 Lisa Curtiss discovers a taste of paradise at this luxury island resort.</h2>
-              <p>For a stress-free luxurious Maldives break, Heritance Aarah is a perfect choice. 
+              <p>For a stress-free luxurious Maldives break, Heritance Aarah is a perfect choice.
                 Located in the Raa Atoll, it’s a 40-minute seaplane hop
-                 from the new terminal at the International Airport in Male.
-                 From the moment you arrive at the jetty, you’re whisked off to a quick and seamless 
-                check in and on to your villa, in our case, one of their premium offerings, an Ocean Suite. The buggy ride gave 
+                from the new terminal at the International Airport in Male.
+                From the moment you arrive at the jetty, you’re whisked off to a quick and seamless
+                check in and on to your villa, in our case, one of their premium offerings, an Ocean Suite. The buggy
+                ride gave
                 a whirlwind scenic tour of the island, which is large in Maldives terms.
               </p>
             </div>
@@ -753,13 +786,16 @@
         <img src="" alt="">
         <p>FORBES BEST BEACHFRONT ALL-INCLUSIVE FAMILY RESORT 2023
 
-             Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male. 
-             Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for
-             the perfect getaway, with a myriad of offerings from an impressive array of dining options by award-winning chefs,
-             to exploring the over or underwater marvels of the Raa Atoll.  
-            
-             Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the Maldives and 
-             the first green-rated building. We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.</p>
+          Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
+          Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for
+          the perfect getaway, with a myriad of offerings from an impressive array of dining options by award-winning
+          chefs,
+          to exploring the over or underwater marvels of the Raa Atoll.
+
+          Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
+          Maldives and
+          the first green-rated building. We are also Travelife Gold certified and invite you to join our
+          eco-initiatives whilst at the resort.</p>
 
         <div class="icon">
           <i class="fa fa-facebook-f"></i>
