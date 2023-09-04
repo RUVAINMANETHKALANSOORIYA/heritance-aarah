@@ -11,66 +11,76 @@
 
 <body>
 
-  <header>
-    <div class="content flex_space">
-      <div class="logo">
-        <img src="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html" alt="" width="250" height="52">
+  <div id="app" x-data="{
+    version: '1.0.0'
+  }">
+
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <img src="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html" alt="" width="250"
+            height="52">
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a>
+            </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/events.html">events</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/branches.html">branches</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">booking</a> </li>
+            <li> <i class="fa fa-search"></i> </li>
+            <li> <button class="primary-btn"><a
+                  href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">BOOK NOW</button></a>
+            </li>
+          </ul>
+          <span class="fa fa-bars" onclick="menutoggle()"></span>
+        </div>
       </div>
-      <div class="navlinks">
-        <ul id="menulist">
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/events.html">events</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/branches.html">branches</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">booking</a> </li>
-          <li> <i class="fa fa-search"></i> </li>
-          <li> <button class="primary-btn"><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">BOOK NOW</button></a></li>
-        </ul>
-        <span class="fa fa-bars" onclick="menutoggle()"></span>
-      </div>
+    </header>
+
+    <section class="home">
+      <div class="image-container">
+        <img src="images/contact.jpg" alt="Your Image" width="100%">
+        <div class="overlay-text">
+          <h1> Heritance Negombo</h1>
+        </div>
+        <div class="text"></div>
+
+
+    </section>
+    <div class="container">
+      <h1>Heritance Negombo Contact Info</h1><br>
+      <p>please fill your name, email, phone num and put a message. we will contact you as soon as possible.</p><br>
+      <form class="contact-form">
+        <label for="name">*Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">*Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Phone num">*Phone num</label>
+        <input type="Phone num" id="Phone num" name="Phone num" required>
+
+        <label for="message">*Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  </header>
 
-  <section class="home">
-    <div class="image-container">
-      <img src="images/contact.jpg" alt="Your Image" width="100%">
-      <div class="overlay-text">
-        <h1> Heritance Negombo</h1>
-      </div>
-      <div class="text"></div>
-
-
-  </section>
-  <div class="container">
-    <h1>Heritance Negombo Contact Info</h1><br>
-    <p>please fill your name, email, phone num and put a message. we will contact you as soon as possible.</p><br>
-    <form class="contact-form">
-      <label for="name">*Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">*Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="Phone num">*Phone num</label>
-      <input type="Phone num" id="Phone num" name="Phone num" required>
-
-      <label for="message">*Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <div class="hotel">
-    <a class="hotel-link"
-      href="https://www.google.com/maps/place/Heritance+Negombo/@7.2348583,79.8408631,15z/data=!4m9!3m8!1s0x3afca5c0b97817b3:0x4a93d7f2d5344757!5m2!4m1!1i2!8m2!3d7.2348583!4d79.8408631!16s%2Fg%2F1tdmyyqr?entry=ttu">
-      <h2>Heritance Negombo</h2>
-      <p>Address: 175 Lewis Pl, Negombo 11500</p>
-    </a>
-  </div><br><br><br><br>
+    <div class="hotel">
+      <a class="hotel-link"
+        href="https://www.google.com/maps/place/Heritance+Negombo/@7.2348583,79.8408631,15z/data=!4m9!3m8!1s0x3afca5c0b97817b3:0x4a93d7f2d5344757!5m2!4m1!1i2!8m2!3d7.2348583!4d79.8408631!16s%2Fg%2F1tdmyyqr?entry=ttu">
+        <h2>Heritance Negombo</h2>
+        <p>Address: 175 Lewis Pl, Negombo 11500</p>
+      </a>
+    </div><br><br><br><br>
 
   </div>
+  
+
 </body>
 
 </html>

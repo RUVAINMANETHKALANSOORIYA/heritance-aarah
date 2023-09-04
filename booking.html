@@ -21,72 +21,79 @@
 
 <body>
 
-
-  <header>
-    <div class="content flex_space">
-      <div class="logo">
-        <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+  <div id="app" x-data="{
+    version: '1.0.0'
+  }">
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"> <img src="heritance-logo.jpg"
+              alt="" width="250" height="52"></a>
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a>
+            </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/events.html">events</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/branches.html">branches</a> </li>
+            <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">booking</a> </li>
+            <li> <i class="fa fa-search"></i> </li>
+            <li> <button class="primary-btn"><a
+                  href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html"></a>BOOK NOW</button>
+            </li>
+          </ul>
+          <span class="fa fa-bars" onclick="menutoggle()"></span>
+        </div>
       </div>
-      <div class="navlinks">
-        <ul id="menulist">
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/events.html">events</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/branches.html">branches</a> </li>
-          <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html">booking</a> </li>
-          <li> <i class="fa fa-search"></i> </li>
-          <li> <button class="primary-btn"><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking.html"></a>BOOK NOW</button> </li>
-        </ul>
-        <span class="fa fa-bars" onclick="menutoggle()"></span>
+    </header>
+
+    <br><br>
+    <section class="home">
+      <div class="image"></div>
+      <img src="images/Experience-7.jpg" alt="A scenic view" width="300" height="200">
+      <div class="overlay-text">
+        <h1>Book Your Stay</h1>
       </div>
+      <div class="text">.......in heritance aarah...........</div>
+    </section>
+
+    <br><br><br>
+    <center>
+      <h1><u>Hotel Heritance Aarah </u></h1><br>
+      <p>
+      <h2>Your Perfect Getaway</h2>
+      </p>
+    </center><br><br>
+    <div class="container">
+      <h2>Book Your Stay</h2>
+      <form class="booking-form">
+        <label for="check-in">Check-In Date</label>
+        <input type="date" id="check-in" name="check-in" required>
+
+        <label for="check-out">Check-Out Date</label>
+        <input type="date" id="check-out" name="check-out" required>
+
+        <label for="room-type">Room Type</label>
+        <select id="room-type" name="room-type" required>
+          <option value="beach">Beach Villas</option>
+          <option value="ocean">Ocean Villas </option>
+          <option value="suite">pool Beach Villas</option>
+          <option value="two">Two Bedroom Family Brach</option>
+          <option value="pool beach">Two Bedroom Family Pool Beach Villas</option>
+          <option value="suites">Ocean Suites</option>
+          <option value="residence">Ocean Residence</option>
+
+
+        </select>
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+
+        <button type="submit">Book Now</button>
+      </form>
     </div>
-  </header>
-
-  </header><br><br>
-  <section class="home">
-    <div class="image"></div>
-    <img src="images/Experience-7.jpg" alt="A scenic view" width="300" height="200">
-    <div class="overlay-text">
-      <h1>Book Your Stay</h1>
-    </div>
-    <div class="text">.......in heritance aarah...........</div>
-  </section>
-
-  <br><br><br>
-  <center>
-    <h1><u>Hotel Heritance Aarah </u></h1><br>
-    <p>
-    <h2>Your Perfect Getaway</h2>
-    </p>
-  </center><br><br>
-  <div class="container">
-    <h2>Book Your Stay</h2>
-    <form class="booking-form">
-      <label for="check-in">Check-In Date</label>
-      <input type="date" id="check-in" name="check-in" required>
-
-      <label for="check-out">Check-Out Date</label>
-      <input type="date" id="check-out" name="check-out" required>
-
-      <label for="room-type">Room Type</label>
-      <select id="room-type" name="room-type" required>
-        <option value="beach">Beach Villas</option>
-        <option value="ocean">Ocean Villas </option>
-        <option value="suite">pool Beach Villas</option>
-        <option value="two">Two Bedroom Family Brach</option>
-        <option value="pool beach">Two Bedroom Family Pool Beach Villas</option>
-        <option value="suites">Ocean Suites</option>
-        <option value="residence">Ocean Residence</option>
-
-
-      </select>
-
-      <label for="guests">Number of Guests</label>
-      <input type="number" id="guests" name="guests" min="1" required>
-
-      <button type="submit">Book Now</button>
-    </form>
   </div>
 
   <script>
