@@ -57,19 +57,19 @@ button {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 85% !important;
   margin: auto;
 }
 
 /*--------header---------*/
 header {
-  height: 10vh;
-  line-height: 10vh;
+  height: 70px;
+
   padding: 0 20px;
 }
 
 header img {
-  margin: 20px 0;
+  height: 70px;
 }
 
 header ul {
@@ -287,7 +287,6 @@ h1 {
   background: linear-gradient(rgba(0,0,0,0.6),#63b9ff);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30vh;
   width: 100%;
   color: #fff;
 }
@@ -505,7 +504,7 @@ h1 {
 /*--------services---------*/
 /*--------Customer---------*/
 .Customer {
-  background-image: url("/images/back.png");
+  background-image: url("../images/back.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;

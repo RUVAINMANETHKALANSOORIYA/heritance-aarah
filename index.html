@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heritance Aarah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css codes/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
     integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
@@ -17,6 +18,13 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -28,10 +36,11 @@
     <header>
       <div class="content flex_space">
         <div class="logo">
-          <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"> <img src="heritance-logo.jpg" alt="" width="250" height="52"></a>
+          <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"> 
+            <img src="heritance-logo.jpg" alt="" class="my-2 h-14"></a>
         </div>
         <div class="navlinks">
-          <ul id="menulist">
+          <ul id="menulist" class="pt-2">
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a> </li>
@@ -48,7 +57,7 @@
 
     <section class="home">
       <div class="content">
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-carousel-main-slideshow owl-theme">
           <div class="item">
             <img src="images/top.jpg" alt="">
             <div class="text">
@@ -87,122 +96,76 @@
       </div>
     </section>
 
-  </div>
-  <script>
-    var menulist = document.getElementById('menulist');
-    menulist.style.maxHeight = "0px";
-
-    function menutoggle() {
-      if (menulist.style.maxHeight == "0px") {
-        menulist.style.maxHeight = "100vh";
-      } else {
-        menulist.style.maxHeight = "0px";
-      }
-    }
-  </script>
-
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: true,
-      dots: false,
-      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    })
-  </script>
-
-
-
-
-  <section class="book">
-    <div class="container flex_space">
-      <div class="text">
-        <h1> <span>Book </span> Your Rooms </h1>
-      </div>
-      <div class="form">
-        <form class="grid">
-          <input type="date" placeholder="Araival Date">
-          <input type="date" placeholder="Departure Date">
-          <input type="number" placeholder="Adults">
-          <input type="number" placeholder="Childern">
-          <input type="submit" value="CHECK AVAILABILITY">
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="about top">
-    <div class="container flex">
-      <div class="left">
-        <div class="heading">
-          <h1>WELCOME</h1>
-          <h2>Heritance Aarah</h2>
+    <section class="book">
+      <div class="container">
+        <div class="text mb-4">
+          <span>Book </span> Your Rooms
         </div>
-        <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
-          Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the
-          perfect getaway,
-          with a myriad of offerings from an impressive array of dining options by award-winning chefs,
-          to exploring the over or underwater marvels of the Raa Atoll.
-          Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
-          Maldives and the first green-rated building.
-          We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.
+        <div class="form">
+          <form class="grid">
+            <input type="date" placeholder="Araival Date">
+            <input type="date" placeholder="Departure Date">
+            <input type="number" placeholder="Adults">
+            <input type="number" placeholder="Childern">
+            <input type="submit" value="CHECK AVAILABILITY">
+          </form>
+        </div>
+      </div>
+    </section>
 
-        </p>
-        <button class="primary-btn">ABOUT US</button>
+    <section class="about top">
+      <div class="container flex">
+        <div class="left">
+          <div class="heading">
+            <h1>WELCOME</h1>
+            <h2>Heritance Aarah</h2>
+          </div>
+          <p>Await a 40-minute scenic sea plane ride at the exclusive Heritance Aarah Lounge when you arrive in Male.
+            Nestled within the scenic Raa Atoll, this Premium All-Inclusive resort in the Maldives sets the tone for the
+            perfect getaway,
+            with a myriad of offerings from an impressive array of dining options by award-winning chefs,
+            to exploring the over or underwater marvels of the Raa Atoll.
+            Responsible travel is at the heart of Heritance Aarah. We are the first LEED Gold certified building in the
+            Maldives and the first green-rated building.
+            We are also Travelife Gold certified and invite you to join our eco-initiatives whilst at the resort.
+  
+          </p>
+          <button class="primary-btn">ABOUT US</button>
+        </div>
+        <div class="right">
+          <img src="images/Welcome-Image.jpg" alt="img" height="650">
+        </div>
       </div>
-      <div class="right">
-        <img src="images/Welcome-Image.jpg" alt="img" height="650">
+    </section>
+  
+    <section class="counter top">
+      <div class="flex justify-between py-5 max-w-4xl mx-auto">
+        <div class="box text-center">
+          <h5 class="text-4xl" x-data="{count : 0}" x-init="let counter = setInterval(() => { count = count+25; count > 2500 && clearInterval(counter)  }, 50)">
+            <span x-text="count"></span>
+          </h5>
+          <hr>
+          <span>Customer</span>
+        </div>
+        <div class="box text-center">
+          <h5 class="text-4xl">1250</h5>
+          <hr>
+          <span>Happy Customer</span>
+        </div>
+        <div class="box text-center">
+          <h5 class="text-4xl">150</h5>
+          <hr>
+          <span>Expert Technicians</span>
+        </div>
+        <div class="box text-center">
+          <h5 class="text-4xl">3550</h5>
+          <hr>
+          <span>Desktop Reaired</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="counter top">
-    <div class="container grid">
-      <div class="box">
-        <h1>2500</h1>
-        <hr>
-        <span>Customer</span>
-      </div>
-      <div class="box">
-        <h1>1250</h1>
-        <hr>
-        <span>Happy Customer</span>
-      </div>
-      <div class="box">
-        <h1>150</h1>
-        <hr>
-        <span>Expert Technicians</span>
-      </div>
-      <div class="box">
-        <h1>3550</h1>
-        <hr>
-        <span>Desktop Reaired</span>
-      </div>
-    </div>
-  </section>
-
+    
 
   <section class="rooms">
     <div class="container top">
@@ -222,14 +185,14 @@
 
       </div>
 
-      <div class="content mtop">
+      <div class="content mtop relative">
         <div class="owl-carousel owl-carousel1 owl-theme">
           <div class="items">
             <div class="image">
               <img src="images/beach villa.jpg" alt="">
             </div>
             <div class="text">
-              <h2>BEACH VILLAS</h2>
+              <h2 class="text-2xl mt-4">BEACH VILLAS</h2>
               <div class="rate flex">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -387,29 +350,8 @@
       </div>
     </div>
   </section>
-  <script>
-    $('.owl-carousel1').owlCarousel({
-      loop: true,
-      margin: 40,
-      nav: true,
-      dots: false,
-      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2,
-          margin: 10,
-        },
-        1000: {
-          items: 3
-        }
-      }
-    })
-  </script>
 
-
+  
 
   <section class="gallery">
     <div class="container top">
@@ -420,7 +362,7 @@
       </div>
 
       <div class="content mtop">
-        <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="owl-carousel owl-carousel-gallery owl-theme">
           <div class="items">
             <div class="img">
               <img src="galary/galary.jpg" alt="" width="250px" height="250px">
@@ -515,32 +457,7 @@
       </div>
   </section>
 
-
-  <script>
-    $('.owl-carousel1').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 1000,
-      autoplayHoverPause: true,
-      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 4,
-        },
-        1000: {
-          items: 6
-        }
-      }
-    })
-  </script>
-
-
+  
   <section class="services top">
     <div class="container">
       <div class="heading">
@@ -632,27 +549,8 @@
       </div>
     </div>
   </section>
-  <script>
-    $('.owl-carousel2').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: false,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 1,
-        },
-        1000: {
-          items: 1
-        }
-      }
-    })
-  </script>
 
-
+  
 
   <section class="news top rooms">
     <div class="container">
@@ -672,101 +570,102 @@
       </div>
 
 
-      <div class="content flex">
-        <div class="left grid2">
-          <div class="items">
-            <div class="image">
-              <img src="images/news.jpg" alt="">
-            </div>
-            <div class="text">
-              <h2>Heritance Aarah Maldives offers the ideal girls’ getaway.</h2>
-              <div class="admin flex">
-                <i class="fa fa-user"></i>
-                <label>Admin</label>
-                <i class="fa fa-heart"></i>
-                <label>500</label>
-                <i class="fa fa-comments"></i>
-              </div>
-              <p> with its spas and sunset cruises, paddle boarding, snorkeling and dolphin cruises.
-                Situated in the Raa Atoll, guests can relax and enjoy royal treatment, with Maldivian
-                hospitality and culture at the centre of the experience. Heritance Aarah has created
-                the ideal escape for groups to unwind while living in utmost comfort against the breathtaking
-                backdrop of the Indian Ocean with the adults-only Ocean Suites.</p>
-            </div>
+      <div class="content grid grid-cols-3 ">
+
+        <div class="items col-span-1">
+          <div class="image">
+            <img src="images/news.jpg" alt="">
           </div>
-          <div class="items">
-            <div class="image">
-              <img src="images/Header-D.jpg" alt="">
+          <div class="text">
+            <h2>Heritance Aarah Maldives offers the ideal girls’ getaway.</h2>
+            <div class="admin flex">
+              <i class="fa fa-user"></i>
+              <label>Admin</label>
+              <i class="fa fa-heart"></i>
+              <label>500</label>
+              <i class="fa fa-comments"></i>
             </div>
-            <div class="text">
-              <h2>Aitken Spence’s Heritance Aarah shines among world’s best at Culinary World Cup 2022</h2>
-              <div class="admin flex">
-                <i class="fa fa-user"></i>
-                <label>Admin</label>
-                <i class="fa fa-heart"></i>
-                <label>500</label>
-                <i class="fa fa-comments"></i>
-              </div>
-              <p>Premier hospitality chain Aitken Spence Hotels showcased their prowess in the culinary sphere,
-                winning five Gold, four Silver and four Bronze at the recently concluded prestigious Villeroy &
-                Boch Culinary World Cup.
-                Its flagship Maldives resort, Heritance Aarah collectively took home 13 medals.
-                The five member team from Heritance Aarah, competed against 60 teams from 55 nations,
-                in an intense five-day competition in Luxembourg-Kirchberg, vying for the prestigious prizes. </p>
-            </div>
+            <p> with its spas and sunset cruises, paddle boarding, snorkeling and dolphin cruises.
+              Situated in the Raa Atoll, guests can relax and enjoy royal treatment, with Maldivian
+              hospitality and culture at the centre of the experience. Heritance Aarah has created
+              the ideal escape for groups to unwind while living in utmost comfort against the breathtaking
+              backdrop of the Indian Ocean with the adults-only Ocean Suites.</p>
           </div>
         </div>
 
-        <div class="right">
-          <div class="box flex">
-            <div class="img">
-              <img src="images/our service.jpg" alt="">
-            </div>
-            <div class="stext">
-              <h2>Discover unmatched seclusion and exquisite experiences; Heritance Aarah introduces Ocean Suites Wing
-              </h2>
-              <p>Heritance Aarah today announced the introduction of the Ocean Suites wing,
-                a resort within a resort that embodies the authenticity of the Maldives. The experience begins upon
-                arrival at the Velana International Airport where guests have access to the exclusive Heritance Aarah
-                Lounge while awaiting transfer.
-              </p>
-            </div>
+        <div class="items col-span-1">
+          <div class="image">
+            <img src="images/Header-D.jpg" alt="">
           </div>
-          <div class="box flex">
-            <div class="img">
-              <img src="images/Arrival-Jetty_Heritance-Aarah-scaled.jpg" alt="">
+          <div class="text">
+            <h2>Aitken Spence’s Heritance Aarah shines among world’s best at Culinary World Cup 2022</h2>
+            <div class="admin flex">
+              <i class="fa fa-user"></i>
+              <label>Admin</label>
+              <i class="fa fa-heart"></i>
+              <label>500</label>
+              <i class="fa fa-comments"></i>
             </div>
-            <div class="stext">
-              <h2>EXPERIENCE THE ULTIMATE INDIAN OCEAN BREAK WITH HERITANCE AARAH MALDIVES</h2>
-              <p>Heritance Aarah Maldives invites all adventure enthusiasts to unravel exotic experiences and enjoy the
-                winter sun on an idyllic island, ensuring a blissful beach break.
-
-                Situated on the Maldivian island of Raa Atoll, adventure awaits with activities on land and sea,
-                allowing visitors to discover the
-                best of this slice of paradise. From sunset cruises, night fishing
-                that ends with cooking up your catch for dinner, to paddle boarding,
-                snorkelling and dolphin cruises, no two days will be the same.
-              </p>
-            </div>
-          </div>
-          <div class="box flex">
-            <div class="img">
-              <img src="images/news.jpg" alt="">
-            </div>
-            <div class="stext">
-              <h2>Hotel Review: Heritance Aarah, Raa Atoll In The Maldives
-                Lisa Curtiss discovers a taste of paradise at this luxury island resort.</h2>
-              <p>For a stress-free luxurious Maldives break, Heritance Aarah is a perfect choice.
-                Located in the Raa Atoll, it’s a 40-minute seaplane hop
-                from the new terminal at the International Airport in Male.
-                From the moment you arrive at the jetty, you’re whisked off to a quick and seamless
-                check in and on to your villa, in our case, one of their premium offerings, an Ocean Suite. The buggy
-                ride gave
-                a whirlwind scenic tour of the island, which is large in Maldives terms.
-              </p>
-            </div>
+            <p>Premier hospitality chain Aitken Spence Hotels showcased their prowess in the culinary sphere,
+              winning five Gold, four Silver and four Bronze at the recently concluded prestigious Villeroy &
+              Boch Culinary World Cup.
+              Its flagship Maldives resort, Heritance Aarah collectively took home 13 medals.
+              The five member team from Heritance Aarah, competed against 60 teams from 55 nations,
+              in an intense five-day competition in Luxembourg-Kirchberg, vying for the prestigious prizes. </p>
           </div>
         </div>
+
+        <div class="items col-span-1">
+          <div class="img">
+            <img src="images/our service.jpg" alt="">
+          </div>
+          <div class="stext">
+            <h2>Discover unmatched seclusion and exquisite experiences; Heritance Aarah introduces Ocean Suites Wing
+            </h2>
+            <p>Heritance Aarah today announced the introduction of the Ocean Suites wing,
+              a resort within a resort that embodies the authenticity of the Maldives. The experience begins upon
+              arrival at the Velana International Airport where guests have access to the exclusive Heritance Aarah
+              Lounge while awaiting transfer.
+            </p>
+          </div>
+        </div>
+
+        <div class="items col-span-1">
+          <div class="img">
+            <img src="images/Arrival-Jetty_Heritance-Aarah-scaled.jpg" alt="">
+          </div>
+          <div class="stext">
+            <h2>EXPERIENCE THE ULTIMATE INDIAN OCEAN BREAK WITH HERITANCE AARAH MALDIVES</h2>
+            <p>Heritance Aarah Maldives invites all adventure enthusiasts to unravel exotic experiences and enjoy the
+              winter sun on an idyllic island, ensuring a blissful beach break.
+
+              Situated on the Maldivian island of Raa Atoll, adventure awaits with activities on land and sea,
+              allowing visitors to discover the
+              best of this slice of paradise. From sunset cruises, night fishing
+              that ends with cooking up your catch for dinner, to paddle boarding,
+              snorkelling and dolphin cruises, no two days will be the same.
+            </p>
+          </div>
+        </div>
+
+        <div class="items col-span-1">
+          <div class="img">
+            <img src="images/news.jpg" alt="">
+          </div>
+          <div class="stext">
+            <h2>Hotel Review: Heritance Aarah, Raa Atoll In The Maldives
+              Lisa Curtiss discovers a taste of paradise at this luxury island resort.</h2>
+            <p>For a stress-free luxurious Maldives break, Heritance Aarah is a perfect choice.
+              Located in the Raa Atoll, it’s a 40-minute seaplane hop
+              from the new terminal at the International Airport in Male.
+              From the moment you arrive at the jetty, you’re whisked off to a quick and seamless
+              check in and on to your villa, in our case, one of their premium offerings, an Ocean Suite. The buggy
+              ride gave
+              a whirlwind scenic tour of the island, which is large in Maldives terms.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -835,7 +734,147 @@
     <p class="container"></p>
   </div>
 
+  </div>
+  
 
+  
+
+
+
+  
+<!-- 
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 40,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script> -->
+
+
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+    $('.owl-carousel-gallery').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+
+  <script>
+    $('.owl-carousel2').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1,
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+
+
+
+  
+  <script>
+    $('.owl-carousel-main-slideshow').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
 
   <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
 </body>
