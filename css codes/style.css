@@ -284,7 +284,7 @@ h1 {
 /*--------about---------*/
 /*--------counter---------*/
 .counter{
-  background-image: url("/images/experience4.jpg");
+  background: linear-gradient(rgba(0,0,0,0.6),#63b9ff);
   background-size: cover;
   background-repeat: no-repeat;
   height: 30vh;
@@ -292,18 +292,18 @@ h1 {
   color: #fff;
 }
 
-.container .grid {
+.counter .grid {
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   place-items: center;
   padding-top: 60px;
 }
 
-.container h1 {
+.counter h1 {
   font-size: 50px;
 }
 
-.container hr {
+.counter hr {
   width: 50%;
   margin: 10px auto;
   background: #7fc142;
