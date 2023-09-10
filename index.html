@@ -40,7 +40,7 @@
             <img src="heritance-logo.jpg" alt="" class="my-2 h-14"></a>
         </div>
         <div class="navlinks">
-          <ul id="menulist" class="pt-2">
+          <ul id="menulist" class="pt-2" class="mb-8">
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html">home</a> </li>
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/Adventures.html">Adventures</a></li>
             <li><a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/restaurents.html">Restaurents</a> </li>
@@ -148,17 +148,23 @@
           <span>Customer</span>
         </div>
         <div class="box text-center">
-          <h5 class="text-4xl">1250</h5>
+          <h5 class="text-4xl" x-data="{count : 0}" x-init="let counter = setInterval(() => { count = count+25; count > 1250 && clearInterval(counter)  }, 50)">
+          <span x-text="count"></span>
+        </h5>
           <hr>
           <span>Happy Customer</span>
         </div>
         <div class="box text-center">
-          <h5 class="text-4xl">150</h5>
+          <h5 class="text-4xl" x-data="{count : 0}" x-init="let counter = setInterval(() => { count = count+25; count > 1000 && clearInterval(counter)  }, 50)">
+          <span x-text="count"></span>
+        </h5>
           <hr>
           <span>Expert Technicians</span>
         </div>
         <div class="box text-center">
-          <h5 class="text-4xl">3550</h5>
+          <h5 class="text-4xl" x-data="{count : 0}" x-init="let counter = setInterval(() => { count = count+25; count > 3550 && clearInterval(counter)  }, 50)">
+          <span x-text="count"></span>
+        </h5>
           <hr>
           <span>Desktop Reaired</span>
         </div>
@@ -653,7 +659,7 @@
             <img src="images/news.jpg" alt="">
           </div>
           <div class="stext">
-            <h2>Hotel Review: Heritance Aarah, Raa Atoll In The Maldives
+            <h2 class=>Hotel Review: Heritance Aarah, Raa Atoll In The Maldives
               Lisa Curtiss discovers a taste of paradise at this luxury island resort.</h2>
             <p>For a stress-free luxurious Maldives break, Heritance Aarah is a perfect choice.
               Located in the Raa Atoll, it’s a 40-minute seaplane hop

@@ -209,8 +209,8 @@ header .navlinks span {
   padding: 4rem 0; /* Add some padding around the section */
 }
 
-.adventure-section h1 {
-  margin-left: 35%;
+.adventure-section h2 {
+ text-align: center;
   font-family: serif;
   font-size: 3rem; /* Set the font size for the heading */
   margin-bottom: 1rem;
@@ -219,8 +219,8 @@ header .navlinks span {
 
 
 
-.adventure-section text h1{
-  font-family:none ;
+.adventure-section text h2{
+  font-family:sans-serif ;
 }
  
 
