@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-[#000000] py-0  ">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="grow h-37">
+                <div class="flex space-x-4">
+                    <a href="#" class="text-black hover:text-gray-300 px-3 py-2 ">Heritance Aarah with Premium All-Inclusive</a>
+                    <a href="#" class="text-white hover:text-gray-300 px-3 py-2">About Us</a>
+                </div>
+                <!-- Logo (Centered) -->
+                <img src="/heritance-aarah/images/download.png" alt="Heritance Aarah" class="mx-auto  ">
+            </div>
+            
+        </div>
+    </nav>
+    <div id="app" x-data="app" class="container">
+
+        <header>
+            <h1 class="text-center text-4 mb-8 mt-8 font-bold text-4xl">Book Now</h1>
+        </header>
+        <main class="container py-8">
+            <div class="flex flex-wrap gap-4 mx-auto max-w-5xl">
+                <div class="w-full lg:w-1/2">
+                    <form x-on:submit="$store.user.updateUser"
+                        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ml-8">
+                        <!-- Date selector -->
+                        <div class="mb-4 ">
+                            <label for="checkin" class="block text-gray-700 font-bold mb-2">Check-in Date</label>
+                            <input type="date" c .lass="block w-full border rounded py-2 px-3" id="checkin"
+                                x-model="$store.user.reservation.check_in" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="checkout" class="block text-gray-700 font-bold mb-2">Check-Out Date</label>
+                            <input type="date" class="block w-full border rounded py-2 px-3" id="checkout"
+                                x-model="$store.user.reservation.check_out" />
+                        </div>
+
+                        <!-- Type of the room -->
+                        <div class="mb-3">
+                            <label for="room_type" class="form-label">Room Type</label>
+                            <select x-model="$store.user.reservation.room_type" name="room_type" id="room_type"
+                                class="form-control">
+                                <option value="">Select</option>
+                                <template x-for="room in $store.accommodation.rooms">
+                                    <option x-bind:value="room.type">
+                                        <span x-text="room.type"></span> - Rs. <span x-text="room.price"></span>
+                                    </option>
+                                </template>
+                            </select>
+                        </div>
+
+                        <!-- Number of rooms -->
+                        <div class="mb-3">
+                            <label for="number_of_rooms" class="form-label">Number of rooms</label>
+                            <select x-model="$store.user.reservation.number_of_rooms" name="number_of_rooms"
+                                id="number_of_rooms" class="form-control">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <!-- Number of guests -->
+                        <div class="mb-3">
+                            <label for="number_of_guests" class="form-label">Number of Adults</label>
+                            <select x-model="$store.user.reservation.adults" name="number_of_guests"
+                                id="number_of_guests" class="form-control">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="number_of_guests" class="form-label">Number of Children</label>
+                            <select x-model="$store.user.reservation.children" name="number_of_guests"
+                                id="number_of_guests" class="form-control">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <!-- children above age of 5 -->
+                        <div class="mb-3">
+                            <label for="children_above_five" class="form-label">Children Above 5yrs</label>
+                            <input type="number" min="0" max="2" class="form-control" id="children_above_five"
+                                x-model="$store.user.reservation.children_above_five" />
+                        </div>
+
+                        <!-- extra bed -->
+                        <div class="mb-3">
+                            <label for="extra_bed" class="form-label">Extra Bed</label>
+                            <input type="number" min="0" max="2" class="form-control" id="extra_bed"
+                                x-model="$store.user.reservation.extra_bed" />
+                        </div>
+
+                        <!-- adventures -->
+                        <div class="mb-3">
+                            <h2>Adventures</h2>
+
+                            <div class="mb-3">
+                                <label for="number_of_guests" class="form-label">Number of Adults</label>
+                                <select x-model="$store.user.reservation.adventure_adults" name="number_of_guests"
+                                    id="number_of_guests" class="form-control">
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="number_of_guests" class="form-label">Number of Children</label>
+                                <select x-model="$store.user.reservation.adventure_children" name="number_of_guests"
+                                    id="number_of_guests" class="form-control">
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- coupon -->
+                        <div class="mb-3">
+                            <label for="promo_code" class="form-label">Coupon</label>
+                            <input type="text" class="form-control" id="promo_code"
+                                x-model="$store.user.reservation.promo_code" />
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Book Now
+                        </button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <!-- Display reservation details -->
+
+                    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <!-- Display reservation details here -->
+                        <!-- ... (Your display elements) ... -->
+                    </div>
+                    <div>
+                        <div>
+                            <span>Hotel</span>
+                            <span x-text="$store.user.reservation.hotel"></span>
+                        </div>
+                        <div>
+                            <span>room</span>
+                            <span x-text="$store.user.reservation.room_type"></span>
+                        </div>
+                        <div>
+                            <span>room</span>
+                            <span x-text="$store.user.reservation.number_of_rooms"></span>
+                        </div>
+                        <div>
+                            <span>check_in</span>
+                            <span x-text="$store.user.reservation.check_in"></span>
+                        </div>
+                        <div>
+                            <span>check_out</span>
+                            <span x-text="$store.user.reservation.check_out"></span>
+                        </div>
+                        <div>
+                            <span>adults</span>
+                            <span x-text="$store.user.reservation.adults"></span>
+                        </div>
+                        <div>
+                            <span>children</span>
+                            <span x-text="$store.user.reservation.children"></span>
+                        </div>
+                        <div>
+                            <span>children above 5 years</span>
+                            <span x-text="$store.user.reservation.children_above_five"></span>
+                        </div>
+                        <div>
+                            <span>extra_bed</span>
+                            <span x-text="$store.user.reservation.extra_bed"></span>
+                        </div>
+                        <div>
+                            <span>adventure_type</span>
+                            <span x-text="$store.user.reservation.adventure_type"></span>
+                        </div>
+                        <div>
+                            <span>adventure_adults</span>
+                            <span x-text="$store.user.reservation.adventure_adults"></span>
+                        </div>
+                        <div>
+                            <span>adventure_children</span>
+                            <span x-text="$store.user.reservation.adventure_children"></span>
+                        </div>
+                        <div>
+                            <span>promo_code</span>
+                            <span x-text="$store.user.reservation.promo_code"></span>
+                        </div>
+                        <div>
+                            <span>total</span>
+                            <span x-text="$store.user.reservation.total"></span>
+                        </div>
+                        <div>
+                            <span>status</span>
+                            <span x-text="$store.user.reservation.status"></span>
+                        </div>
+                        <div>
+                            <span>payment_type</span>
+                            <span x-text="$store.user.reservation.payment_type"></span>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="/heritance-aarah/store/hotel.js"></script>
+    <script src="/heritance-aarah/store/accomadation.js"></script>
+    <script src="/heritance-aarah/store/adventure.js"></script>
+    <script src="/heritance-aarah/store/user.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+
+            }));
+        })
+    </script>
+</body>
+
+</html>

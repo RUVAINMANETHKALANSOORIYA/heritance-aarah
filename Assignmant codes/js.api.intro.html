@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body>
+    <div id="app" x-data="users">
+        <h1>Users</h1>
+        //create a table with the users
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">ID</th>
+                    <th class="px-4 py-2">Email</th>
+                    <th class="px-4 py-2">First Name</th>
+                    <th class="px-4 py-2">Last Name</th>
+                    <th class="px-4 py-2">Avatar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="user in users" :key="user.id">
+                    <tr>
+                        <td class="border px-4 py-2" x-text="user.id"></td>
+                        <td class="border px-4 py-2" x-text="user.email"></td>
+                        <td class="border px-4 py-2" x-text="user.first_name"></td>
+                        <td class="border px-4 py-2" x-text="user.last_name"></td>
+                        <td class="border px-4 py-2"><img x-bind:src="user.avatar" alt="" width="50"></td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <div class="flex space-x-5 mt-6 mb-6 justiy-center">
+                <button x-on:click="getUsers(page - 1)" :disabled="page==1">previous</button>
+                <template x-for="page in total_pages" :key="page">
+                    <div x-text="page" x-on:click="getUsers(page)">
+
+                    </div>
+                </template>
+                <button x-on:click="getUsers(page + 1)" :disabled="page==total_pages">next</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('users', () => ({
+                users: [],
+                page: 1,
+                total_pages: 1,
+
+                init() {
+                    console.log('users loaded');
+                    this.getUsers(this.page);
+                },
+                getUsers(page) {
+                    fetch('https://reqres.in/api/users?page=' + page)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.data);
+                            this.users = data.data;
+                            this.page = data.page;
+                            this.total_pages = data.total_pages;
+                        })
+                },
+            }))
+        })
+    </script>
+</body>
+
+</html>
