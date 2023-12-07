@@ -3,31 +3,31 @@ document.addEventListener("alpine:init", () => {
         rooms: [
           {
             type: 'BEACH VILLA',
-            price: 25000,
+            price: 5000,
           },
           {
             type: 'OCEAN VILLAS',
-            price: 50000,
+            price: 10000,
           },
           {
             type: 'POOL BEACH VILLAS',
-            price: 75000,
+            price: 15000,
           },
           {
             type: 'TWO BED ROOM FAMILY BEACH',
-            price: 100000,
+            price: 20000,
           }, 
           {
             type: 'TWO BED ROOM FAMILY POOL BEACH VILLAS',
-            price: 125000,
+            price: 25000,
           }, 
           {
             type: 'OCEAN SUITES',
-            price: 200000,
+            price: 30000,
           },  
           {
             type: 'OCEAN RESIDENCE',
-            price: 250000,
+            price: 35000,
           },  
         
         ],
@@ -51,14 +51,6 @@ document.addEventListener("alpine:init", () => {
         {
           code : 'Promo123',
           discount : 5,
-        },
-        {
-          code : 'Promo456',
-          discount : 10,
-        },
-        {
-          code : 'Promo789',
-          discount : 15,
         },
       ]
     });

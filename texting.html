@@ -41,6 +41,10 @@
                             <p class="fs-4">
                                 Mr or Mrs, welcome to our hotel booking page.
                             </p>
+                            <p class="mt-2 font-bold ">
+                                press this button to see facilites and other details about our hotel.</p>
+                                <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking2.html"><button class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 mt-8 mb-8">facilities</button></a>
+                            
                             <p>
                                 You have <span x-text="loyalty_points"></span> loyalty points
                             </p>
@@ -79,13 +83,13 @@
                         <div class="form-floating mb-3 col-12">
                             <select type="date" x-model="booking.room_cost" class="form-control" id="room">
                                 <option value="0">Select Room</option>
-                                <option value="25,000">BEACH VILLA</option>
-                                <option value="50,000">OCEAN VILLAS</option>
-                                <option value="75,000">POOL BEACH VILLAS</option>
-                                <option value="100,000">TWO BED ROOM FAMILY BEACH</option>
-                                <option value="125,000">TWO BED ROOM FAMILY POOL BEACH VILLAS</option>
-                                <option value="200,000">OCEAN SUITES</option>
-                                <option value="250,000">OCEAN RESIDENCE</option>
+                                <option value="5000">BEACH VILLA</option>
+                                <option value="10000">OCEAN VILLAS</option>
+                                <option value="15000">POOL BEACH VILLAS</option>
+                                <option value="20000">TWO BED ROOM FAMILY BEACH</option>
+                                <option value="25000">TWO BED ROOM FAMILY POOL BEACH VILLAS</option>
+                                <option value="30000">OCEAN SUITES</option>
+                                <option value="35000">OCEAN RESIDENCE</option>
                             </select>
                             <label for="room">Room</label>
                         </div>
@@ -444,10 +448,7 @@
             Alpine.data('_app', () => ({
 
                 coupons: [
-                    'COUPON1',
-                    'COUPON2',
-                    'COUPON3',
-                    'COUPON4',
+                    'Promo123',
                 ],
 
                 past_bookings: [],
@@ -684,7 +685,7 @@
                     this.$watch('booking.promo_code', (value) => {
                         if (this.coupons.includes(value)) {
                             // alert('Coupon Applied');
-                            this.booking.discount_percentage = 10;
+                            this.booking.discount_percentage = 5;
                         } else {
                             this.booking.discount_percentage = 0;
                         }
