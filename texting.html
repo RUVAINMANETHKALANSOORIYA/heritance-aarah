@@ -40,16 +40,19 @@
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <p class="fs-4">
-                                Heritance Aarah with Premium All-Inclusive                            </p>
+                                Heritance Aarah with Premium All-Inclusive </p>
                             <p class="mt-2 font-bold">
                                 Press this button to see facilities and other details about our hotel.
                             </p>
                             <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking2.html">
-                                <button class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 mt-8 mb-8">Facilities</button>
+                                <button
+                                    class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 mt-8 mb-8">Facilities</button>
                             </a>
-            
-                            <button @click="showPoints = true" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-700 transition duration-300 mt-4">Loyalty Points</button>
-            
+
+                            <button @click="showPoints = true"
+                                class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700  transition duration-300 mt-4">Loyalty
+                                Points</button>
+
                             <div x-show="showPoints" class="mt-4">
                                 <p>You have <span x-text="loyalty_points"></span> loyalty points</p>
                             </div>
@@ -60,8 +63,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
 
             <ul class="nav nav-tabs">
                 <li class="nav-item" x-on:click="tab = 1">
@@ -238,7 +241,7 @@
                 </div>
 
                 <div x-show="tab === 2">
-                    <h5>
+                    <h5 class="font-bold text-2xl">
                         Summary
                     </h5>
                     <table class="table table-bordered">
@@ -282,7 +285,7 @@
                         </tbody>
                     </table>
                     <hr>
-                    <h5>
+                    <h5 class="font-bold text-2xl mt-2 mb-2">
                         Checkout
                     </h5>
                     <form x-on:submit.prevent="completeBooking">
@@ -350,7 +353,7 @@
                 </div>
 
                 <div x-show="tab === 3">
-                    <h5>
+                    <h5 class="font-bold text-2xl mb-4">
                         Favorites
                     </h5>
 
@@ -401,7 +404,7 @@
 
                 </div>
                 <div x-show="tab === 4">
-                    <h5>
+                    <h5 class="font-bold text-2xl mb-4">
                         Past Bookings
                     </h5>
 
@@ -521,9 +524,24 @@
                     return total;
                 },
 
+                // get total_cost() {
+                //     let total = 0;
+                //     total += this.booking.room_cost * this.booking.number_of_rooms;
+                //     total += this.total_adventure_cost;
+                //     this.booking.total_cost = total;
+
+                //     // calculate discount
+                //     this.booking.total_discount = total * (this.booking.discount_percentage / 100);
+
+                //     // calculate final total
+                //     this.booking.final_total = total - this.booking.total_discount;
+
+                //     return total;
+                // },
                 get total_cost() {
                     let total = 0;
-                    total += this.booking.room_cost * this.booking.number_of_rooms;
+                    extra = this.booking.extra_bed * 8000;
+                    total += (this.booking.room_cost * this.booking.number_of_rooms) + extra;
                     total += this.total_adventure_cost;
                     this.booking.total_cost = total;
 
@@ -534,8 +552,8 @@
                     this.booking.final_total = total - this.booking.total_discount;
 
                     return total;
-                },
 
+                },
                 goToCheckout() {
                     // change the tab to 2 (checkout)
                     this.tab = 2;
