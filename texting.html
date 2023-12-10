@@ -23,7 +23,8 @@
                     <a href="#" class="text-black hover:text-gray-300 px-3 py-2 font-bold ">About Us</a>
                 </div>
                 <!-- Logo (Centered) -->
-                <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"><img src="/heritance-aarah/images/download.png" alt="Heritance Aarah" class="mx-auto "></a>
+                <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"><img
+                        src="/heritance-aarah/images/download.png" alt="Heritance Aarah" class="mx-auto "></a>
             </div>
 
         </div>
@@ -33,28 +34,34 @@
 
         <div class="mt-4">
 
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3" x-data="{ loyalty_points: 100 }">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Welcome to Hotel Heritance Aarah </h1>
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <p class="fs-4">
-                                Mr or Mrs, welcome to our hotel booking page.
+                                Heritance Aarah with Premium All-Inclusive                            </p>
+                            <p class="mt-2 font-bold">
+                                Press this button to see facilities and other details about our hotel.
                             </p>
-                            <p class="mt-2 font-bold ">
-                                press this button to see facilites and other details about our hotel.</p>
-                                <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking2.html"><button class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 mt-8 mb-8">facilities</button></a>
-                            
-                            <p>
-                                You have <span x-text="loyalty_points"></span> loyalty points
-                            </p>
+                            <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/booking2.html">
+                                <button class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 mt-8 mb-8">Facilities</button>
+                            </a>
+            
+                            <button @click="showPoints = true" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-700 transition duration-300 mt-4">Loyalty Points</button>
+            
+                            <div x-show="showPoints" class="mt-4">
+                                <p>You have <span x-text="loyalty_points"></span> loyalty points</p>
+                            </div>
                         </div>
                         <div class="col-md-4 text-end">
-                            <img src="/heritance-aarah/images/heritance 5.jpg" alt="img" class="w-150 h-150" >
+                            <img src="/heritance-aarah/images/heritance 5.jpg" alt="img" class="w-150 h-150">
                         </div>
                     </div>
                 </div>
             </div>
+            
+            
 
             <ul class="nav nav-tabs">
                 <li class="nav-item" x-on:click="tab = 1">
@@ -75,7 +82,7 @@
             <div class="border border-1 p-4">
                 <div x-show="tab === 1">
 
-                    <h5>
+                    <h5 class="mt-2 font-bold text-2xl">
                         Select Room
                     </h5>
 
@@ -128,7 +135,7 @@
 
                     <hr>
 
-                    <h5>
+                    <h5 class="mt-4 mb-2 text-2xl font-bold">
                         Select Adventure
                     </h5>
 
@@ -172,7 +179,7 @@
 
                     <hr>
 
-                    <h5>
+                    <h5 class="mt-4 text-2xl font-bold">
                         Summary
                     </h5>
 
@@ -504,7 +511,7 @@
 
                 get total_adventure_cost() {
                     let total = 0;
-                    total += this.booking.adventure.number_of_adults_local * 1000;
+                    total += this.booking.adventure.number_of_adults_local * 5000;
                     total += this.booking.adventure.number_of_adults_foreign * 2000;
                     total += this.booking.adventure.number_of_children_local * 500;
                     total += this.booking.adventure.number_of_children_foreign * 1000;
