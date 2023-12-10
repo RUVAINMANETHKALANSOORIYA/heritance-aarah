@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="bg-[#d97706] py-0  ">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="grow h-37">
+            <div class="flex-grow h-37 flex justify-center items-center">
                 <div class="flex space-x-4">
                     <a href="#" class="text-black hover:text-gray-300 px-3 py-2 font-bold ">Heritance Aarah with Premium
                         All-Inclusive</a>
@@ -24,7 +24,7 @@
                 </div>
                 <!-- Logo (Centered) -->
                 <a href="https://ruvainmanethkalansooriya.github.io/heritance-aarah/index.html"><img
-                        src="/heritance-aarah/images/download.png" alt="Heritance Aarah" class="mx-auto "></a>
+                        src="/heritance-aarah/images/loogo2.png" alt="Heritance Aarah" class="mx-auto w-20 py-5"></a>
             </div>
 
         </div>
@@ -524,20 +524,7 @@
                     return total;
                 },
 
-                // get total_cost() {
-                //     let total = 0;
-                //     total += this.booking.room_cost * this.booking.number_of_rooms;
-                //     total += this.total_adventure_cost;
-                //     this.booking.total_cost = total;
 
-                //     // calculate discount
-                //     this.booking.total_discount = total * (this.booking.discount_percentage / 100);
-
-                //     // calculate final total
-                //     this.booking.final_total = total - this.booking.total_discount;
-
-                //     return total;
-                // },
                 get total_cost() {
                     let total = 0;
                     extra = this.booking.extra_bed * 8000;
